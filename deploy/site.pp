@@ -5,6 +5,12 @@ node default {
      $role = "node"
   }
 
+  if $::hostname == "node0" {
+    package{"httpd": ensure => present }
+    service{"httpd": ensure => running, enable => true }
+  }
+  package{"vim-enhanced": ensure => present }
+
   class{"roles::${role}": } ->
 
   file{"/etc/mcollective/classes.txt":

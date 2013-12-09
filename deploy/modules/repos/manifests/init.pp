@@ -8,7 +8,7 @@ class repos {
   yumrepo { 'puppetlabs-devel':
       baseurl  => 'http://yum.puppetlabs.com/el/6/devel/$basearch',
       descr    => 'Puppet Labs Devel El 6 - $basearch',
-      enabled  => '1',
+      enabled  => '0',
       gpgcheck => '0'
   } ->
 
